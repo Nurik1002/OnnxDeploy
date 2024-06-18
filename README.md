@@ -3,18 +3,27 @@ This project provides a simple REST API for classifying images as cats or dogs u
 
 # Backend: Python (FastAPI, onnxruntime, OpenCV)
 API Server: uvicorn
+
 Dependency Management: pip
+
 (Optional) Tunneling: ngrok (for exposing the API locally)
+
 Features
+
 Upload an image file.
+
 Receive a classification response ("Cat" or "Dog").
-Running the Project
+
+# Running the Project
+
 Prerequisites:
 
-Python 3.x
+* Python 3.x
 * pip (Python package manager)
 * OpenCV
 * onnxruntime
+* uvicorn
+* ngrok
 
 # Installation:
 
@@ -26,7 +35,7 @@ https://github.com/Nurik1002/OnnxDeploy.git
 
 Install dependencies:
 
-```Bash
+```
 pip install -r requirements.txt
 ```
 
