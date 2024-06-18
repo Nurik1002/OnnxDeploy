@@ -1,6 +1,6 @@
 import requests
 import time
-def predict_image(image_path, api_url='https://9ef1-176-59-19-210.ngrok-free.app'):
+def predict_image(image_path, api_url):
     api_url += "/predict"
     with open(image_path, 'rb') as image_file:
         image_data = image_file.read()
