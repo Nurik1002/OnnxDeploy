@@ -11,16 +11,16 @@ if not os.path.exists(uploads_dir):
     os.makedirs(uploads_dir)
 
 @app.post("/predict")
-def upload(file: UploadFile = File(...)):
+async def upload(file: UploadFile = File(...)):
     try:
         local_image_path = f"uploads/{file.filename}"
         with open(local_image_path, 'wb') as f:
-            f.write(file.file.read())
+             f.write(file.file.read())
 
-        img = cv2.imread(local_image_path)
-        result = onnxPred(img)
+        img =  cv2.imread(local_image_path)
+        result = await onnxPred(img)
 
-        return  result
+        return result
 
     except Exception as e:
         return {"message": f"There was an error: {str(e)}"}

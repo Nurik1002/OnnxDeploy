@@ -14,7 +14,7 @@ def predict_image(image_path, api_url):
 
 if __name__=="__main__":
     start_time = time.time()
-    api_url = "https://9ef1-176-59-19-210.ngrok-free.app"
+    api_url = "https://95c3-94-25-228-114.ngrok-free.app"
     n = 100 # Num of requests
     for i in range(1, n+1):
         peet = "dog" if i % 2 == 0 else "cat"
